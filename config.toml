@@ -1,0 +1,50 @@
+baseURL = "https://coronavirus-rio-claro.netlify.app/"
+languageCode = "pt-br"
+title = "Covid-19"
+theme = "minimal"
+
+[params]
+    author = "Grupo de Expertise da UNESP Rio Claro"
+    description = "Expertise da UNESP Rio Claro para acompanhar COVID-19 no município"
+    githubUsername = "#mauriciovancine"
+    accent = "deepskyblue"
+    showBorder = true
+    backgroundColor = "white"
+    font = "Raleway" # should match the name on Google Fonts!
+    highlight = true
+    highlightStyle = "default"
+    highlightLanguages = ["R", "go", "haskell", "kotlin", "scala", "swift"]
+
+[[menu.main]]
+    url = "/"
+    name = "Home"
+    weight = 1
+
+[[menu.main]]
+    url = "/about/"
+    name = "Sobre"
+    weight = 2
+
+[[menu.main]]
+    url = "/post/"
+    name = "Posts"
+    weight = 3
+    
+[[menu.main]]
+    url = "/midia/"
+    name = "Mídia"
+    weight = 4
+
+# Social icons to be shown on the right-hand side of the navigation bar.
+# The "name" field should match the name of the icon in Font Awesome.
+# The list of available icons can be found at http://fontawesome.io/icons.
+
+[[menu.icon]]
+    url = "mailto:me@example.com"
+    name = "envelope-o"
+    weight = 1
+
+[[menu.icon]]
+    url = "https://github.com/mauriciovancine/coronavirus-rio-claro"
+    name = "github"
+    weight = 2

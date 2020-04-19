@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mortos on Covid-19</title>
+    <link>/tags/mortos/</link>
+    <description>Recent content in Mortos on Covid-19</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 18 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/mortos/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Casos de COVID-19 em Rio Claro/SP</title>
+      <link>/post/2020-04-18-r-graficos/</link>
+      <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2020-04-18-r-graficos/</guid>
+      <description>Número de casos de COVID-19 Esse relatório dinâmico mostra o número de casos e mortes de COVID-19 em Rio Cla/SP
+Os dados são obtidos de forma dinâmica do site do pesquisador Wesley Cota, que inclui os dados confirmados pela plataforma oficial do Ministério da Saúde e demais noticiados pelas secretarias de saúde de cada estado.
+Esse relatório foi inspirado na postagem Relatório dinâmico com Rmarkdown: COVID-19 no Brasil de Ícaro Agostino.</description>
+    </item>
+    
+  </channel>
+</rss>
