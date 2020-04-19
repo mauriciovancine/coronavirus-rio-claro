@@ -1,4 +1,4 @@
-baseURL = "https://coronavirus-rio-claro.netlify.app/"
+baseURL = "https://coronavirusrioclaro.netlify.com"
 languageCode = "pt-br"
 title = "Covid-19"
 theme = "minimal"
@@ -21,18 +21,18 @@ theme = "minimal"
     weight = 1
 
 [[menu.main]]
-    url = "/about/"
-    name = "Sobre"
-    weight = 2
-
-[[menu.main]]
     url = "/post/"
     name = "Posts"
-    weight = 3
+    weight = 2
     
 [[menu.main]]
     url = "/midia/"
     name = "Mídia"
+    weight = 3
+    
+[[menu.main]]
+    url = "/about/"
+    name = "Sobre"
     weight = 4
 
 # Social icons to be shown on the right-hand side of the navigation bar.
