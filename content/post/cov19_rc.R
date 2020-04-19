@@ -26,7 +26,7 @@ fig_cases_rc <- ggplot(data = rc_cases_time) +
   geom_point(size = 4, color = "white", fill = "steelblue", shape = 21, stroke = .5, alpha = .95) +
   labs(x = "Data", 
        y = "Número de casos confirmados") +
-  scale_x_date(date_breaks = "5 day", 
+  scale_x_date(date_breaks = "1 day", 
                date_labels = "%d/%m") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90), 
@@ -39,7 +39,7 @@ fig_new_cases_rc <- ggplot(data = rc_cases_time) +
   geom_point(size = 4, color = "white", fill = "red", shape = 21, stroke = .5, alpha = .95) +
   labs(x = "Data", 
        y = "Número de novos casos confirmados") +
-  scale_x_date(date_breaks = "5 day", date_labels = "%d/%m") +
+  scale_x_date(date_breaks = "1 day", date_labels = "%d/%m") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90), 
         legend.position = "none")
@@ -51,7 +51,7 @@ fig_deaths_rc <-  ggplot(data = rc_cases_time) +
   geom_point(size = 4, color = "white", fill = "gray30", shape = 21, stroke = .5, alpha = .95) +
   labs(x = "Data", 
        y = "Número de mortes") +
-  scale_x_date(date_breaks = "5 day", 
+  scale_x_date(date_breaks = "1 day", 
                date_labels = "%d/%m") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90), 
