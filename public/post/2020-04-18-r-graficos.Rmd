@@ -8,6 +8,8 @@ tags: []
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
+library(lubridate)
+library(tidyverse)
 ```
 
 ```{r include=FALSE}
@@ -21,22 +23,22 @@ Os dados são obtidos de forma dinâmica do [site](https://labs.wesleycota.com/s
 
 Esse relatório foi inspirado na postagem [Relatório dinâmico com Rmarkdown: COVID-19 no Brasil](https://icaroagostino.github.io/post/rmd-cov19/) de [Ícaro Agostino ](https://icaroagostino.github.io/blog/).
 
-Última atualização: **18/04/2020**
+Última atualização: **`r lubridate::today() %>% format(format="%d/%m/%Y")`**.
 
 ---
 
 ## Gráficos
-### Total acumulado diário do número de casos confirmados em Rio Claro (COVID-19)
+### Total acumulado diário do número de casos confirmados em Rio Claro/SP
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 ggplotly(fig_cases_rc)
 ```
 
-### Evolução diária de novos casos confirmadas em Rio Claro (COVID-19)
+### Evolução diária de novos casos confirmadas em Rio Claro/SP
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 ggplotly(fig_new_cases_rc)
 ```
 
-### Evolução diária do número de mortes confirmadas em Rio Claro (COVID-19)
+### Evolução diária do número de mortes confirmadas em Rio Claro/SP
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 ggplotly(fig_deaths_rc)
 ```

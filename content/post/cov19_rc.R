@@ -16,13 +16,16 @@ rc_sus <- readr::read_csv("https://raw.githubusercontent.com/JoaoCarabetta/Simul
 
 # municipality time - https://covid19br.wcota.me/
 rc_cases_time <- readr::read_csv("https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-cities-time.csv") %>% 
-  dplyr::filter(city  == "Rio Claro/SP")
+  dplyr::filter(city  == "Rio Claro/SP") %>% 
+  dplyr::rename(total_de_casos = totalCases,
+                novos_casos = newCases,
+                mortes = deaths)
 
 # graphics ----------------------------------------------------------------
 # total cases
 fig_cases_rc <- ggplot(data = rc_cases_time) +
-  aes(x = date, y = totalCases, label = totalCases) +
-  geom_line(size = 2, color = "steelblue") +
+  aes(x = date, y = total_de_casos) +
+  geom_line(size = 1, color = "steelblue") +
   geom_point(size = 4, color = "white", fill = "steelblue", shape = 21, stroke = .5, alpha = .95) +
   labs(x = "Data", 
        y = "Número de casos confirmados") +
@@ -34,8 +37,8 @@ fig_cases_rc <- ggplot(data = rc_cases_time) +
 
 # new cases
 fig_new_cases_rc <- ggplot(data = rc_cases_time) +
-  aes(x = date, y = newCases, label = newCases) +
-  geom_line(size = 2, color = "red") +
+  aes(x = date, y = novos_casos) +
+  geom_line(size = 1, color = "red") +
   geom_point(size = 4, color = "white", fill = "red", shape = 21, stroke = .5, alpha = .95) +
   labs(x = "Data", 
        y = "Número de novos casos confirmados") +
@@ -46,8 +49,8 @@ fig_new_cases_rc <- ggplot(data = rc_cases_time) +
 
 # deaths
 fig_deaths_rc <-  ggplot(data = rc_cases_time) +
-  aes(x = date, y = deaths, label = deaths) +
-  geom_line(color = "gray30", size = 2) +
+  aes(x = date, y = mortes) +
+  geom_line(size = 1, color = "gray30") +
   geom_point(size = 4, color = "white", fill = "gray30", shape = 21, stroke = .5, alpha = .95) +
   labs(x = "Data", 
        y = "Número de mortes") +
