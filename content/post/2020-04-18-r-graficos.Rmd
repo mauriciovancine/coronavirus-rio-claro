@@ -2,18 +2,16 @@
 title: "Casos de COVID-19 em Rio Claro/SP"
 author: "Maurício Vancine"
 date: 2020-04-18
-categories: ["R"]
-tags: ["Total de Casos", "Novos Casos", "Mortos"]
+categories: []
+tags: []
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(collapse = TRUE)
-library(plotly)
 ```
 
 ```{r include=FALSE}
 source("cov19_rc.R")
-library(plotly)
 ```
 
 ## Número de casos de COVID-19
