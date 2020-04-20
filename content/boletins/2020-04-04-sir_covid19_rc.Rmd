@@ -25,5 +25,5 @@ Os cenários simulados apresentados limitam-se as hipóteses lançadas na concep
 Ainda, cada cenário não concretizado pelos fatos de um futuro próximo espelham as atitudes tomadas no presente
 
 ## Documento
-O documento em sua íntegra pode ser acessado nesse [link](coronavirusrioclaro.netlify.app/2020-04-18-r-graficos/static/pdf/Modelo SIR compartimentado Rio Claro_R Moruzzi-IGCE-UNESP.pdf)
+O documento em sua íntegra pode ser acessado nesse [link](https://coronavirusrioclaro.netlify.app/static/pdf/Modelo SIR compartimentado Rio Claro_R Moruzzi-IGCE-UNESP.pdf)
 
