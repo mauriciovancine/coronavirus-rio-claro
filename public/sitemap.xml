@@ -3,7 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/2020-04-18-r-graficos/</loc>
+    <loc>/post/2020-04-18-r-graficos.knit/</loc>
+    <lastmod>2020-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/2020-04-18-r-graficos.utf8/</loc>
     <lastmod>2020-04-18T00:00:00+00:00</lastmod>
   </url>
   
