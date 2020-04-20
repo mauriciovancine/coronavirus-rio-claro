@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>COVID-19 Rio Claro</title>
-    <link>/</link>
-    <description>Recent content on COVID-19 Rio Claro</description>
+    <title>Boletins on COVID-19 Rio Claro</title>
+    <link>/boletins/</link>
+    <description>Recent content in Boletins on COVID-19 Rio Claro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Sat, 18 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/boletins/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -30,37 +30,6 @@ Esse relatório foi inspirado na postagem Relatório dinâmico com Rmarkdown: CO
       <guid>/boletins/2020-04-04-sir_covid19_rc/</guid>
       <description>Conteúdo As informações constantes nesse documento foram elaboradas visando auxiliar as ações do poder público local no combate ao espalhamento doença infecciosa causada pela síndrome respiratória aguda grave 2 (SARS-CoV-2), COVID 19
  Apresentação Dada a presente situação de emergência que aflige o planeta em decorrência do rápido espalhamento da doença infecciosa causada pelo coronavírus da síndrome respiratória aguda grave 2 (SARS-CoV-2), COVID 19, apresentam-se nesse documento cenários de infecção para a cidade de Rio Claro.</description>
-    </item>
-    
-    <item>
-      <title>Informações</title>
-      <link>/infos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/infos/</guid>
-      <description>Descrição Apresentamos aqui sites que disponibilizam informações, bases de dados e simulações
- Bases de dados Mundial   worldometers: base de dados mundial por países. É possivel visualizar casos, mortes, recuperados, número de testes por países
-  Our World in Data: base de dados mundial por países: faz gráficos pré-defindos, possibilita selecionar países, continentes
-  Johns Hopkins University (JHU): COVID-19 Dashboard by the Center for Systems Science and Engineering (CSSE) at Johns Hopkins University (JHU)</description>
-    </item>
-    
-    <item>
-      <title>Mídia</title>
-      <link>/midia/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/midia/</guid>
-      <description>17-04-2020 - Unesp Rio Claro e Adolfo Lutz iniciarão análise de exames da Covid-19</description>
-    </item>
-    
-    <item>
-      <title>Sobre</title>
-      <link>/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Descrição Pesquisadores do Campus iniciam os trabalhos para colocar nossa expertise a serviço da comunidade. Num primeiro momento o grupo subsidiará a produção de uma matéria sobre as previsões da pandemia e uma outra sobre o impacto
-Membros  Eduardo Kokubun (Depto. Educação Física – IB) Auro Aparecido Mendes (Depto. de Geografia e Planejamento Ambiental – IGCE) Rodrigo Braga Moruzzi (Depto. de Geografia e Planejamento Ambiental – IGCE) Milton Cezar Ribeiro (Depto.</description>
     </item>
     
   </channel>

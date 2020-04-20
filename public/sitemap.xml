@@ -3,12 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/2020-04-18-r-graficos.knit/</loc>
+    <loc>/boletins/</loc>
     <lastmod>2020-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/2020-04-18-r-graficos.utf8/</loc>
+    <loc>/boletins/2020-04-18-r-graficos/</loc>
     <lastmod>2020-04-18T00:00:00+00:00</lastmod>
   </url>
   
@@ -18,12 +18,16 @@
   </url>
   
   <url>
-    <loc>/post/</loc>
-    <lastmod>2020-04-18T00:00:00+00:00</lastmod>
+    <loc>/boletins/2020-04-04-sir_covid19_rc/</loc>
+    <lastmod>2020-04-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>/infos/</loc>
   </url>
   
   <url>
