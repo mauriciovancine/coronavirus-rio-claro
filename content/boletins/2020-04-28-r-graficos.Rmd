@@ -1,7 +1,7 @@
 ---
 title: "Casos de COVID-19 em Rio Claro/SP"
 author: "Maurício Vancine"
-date: 2020-04-30
+date: 2020-05-01
 categories: []
 tags: []
 ---
@@ -17,7 +17,7 @@ source("cov19_rc.R")
 ```
 
 ## Número de casos de COVID-19
-Esse relatório dinâmico mostra o número de casos e mortes de **COVID-19 em Rio Cla/SP**
+Esse relatório dinâmico mostra o número de casos e mortes de **COVID-19 em Rio Claro/SP**
 
 Os dados são obtidos de forma dinâmica do [site](https://labs.wesleycota.com/sarscov2/br/) do pesquisador [Wesley Cota](https://wesleycota.com/), que inclui os dados confirmados pela plataforma oficial do Ministério da Saúde e demais noticiados pelas secretarias de saúde de cada estado.
 
