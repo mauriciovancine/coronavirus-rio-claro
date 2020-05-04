@@ -1,7 +1,7 @@
 #' ---
 #' title: covid19 rio claro
 #' author: mauricio vancine
-#' date: 2021-04-18
+#' date: 2021-05-04
 #' ---
 
 # packages
