@@ -1,7 +1,7 @@
 ---
 title: "Casos de COVID-19 em Rio Claro/SP"
 author: "Maurício Vancine"
-date: 2020-05-08
+date: 2020-05-09
 categories: []
 tags: []
 ---
@@ -56,12 +56,12 @@ ggplotly(fig_sus_rc)
 
 ## Análise dos municípios do entorno de Rio Claro/SP
 ### Evolução diária de novos casos confirmadas
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE, duration = 15, start_pause = 10, end_pause = 60}
 gganimate::animate(fig_cases_mun_ani)
 ```
 
 ### Evolução diária do número de mortes confirmadas
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE, duration = 15, start_pause = 10, end_pause = 60}
 gganimate::animate(fig_mortes_mun_ani)
 ```
 

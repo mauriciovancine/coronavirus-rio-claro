@@ -5,7 +5,6 @@
 #' ---
 
 # packages
-library(ggrepel)
 library(geobr)
 library(gganimate)
 library(gifski)
@@ -31,10 +30,10 @@ rc_cases_time <- readr::read_csv("https://raw.githubusercontent.com/wcota/covid1
 fig_cases_rc <- ggplot(data = rc_cases_time) +
   aes(x = date, y = total_de_casos) +
   geom_line(size = 1, color = "steelblue") +
-  geom_point(size = 4, color = "white", fill = "steelblue", shape = 21, stroke = .5, alpha = .95) +
+  geom_point(size = 3, color = "white", fill = "steelblue", shape = 21, stroke = .5, alpha = .95) +
   labs(x = "Data", 
        y = "Número de casos confirmados") +
-  scale_x_date(date_breaks = "1 day", 
+  scale_x_date(date_breaks = "2 day", 
                date_labels = "%d/%m") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90), 
@@ -44,10 +43,10 @@ fig_cases_rc <- ggplot(data = rc_cases_time) +
 fig_new_cases_rc <- ggplot(data = rc_cases_time) +
   aes(x = date, y = novos_casos) +
   geom_line(size = 1, color = "red") +
-  geom_point(size = 4, color = "white", fill = "red", shape = 21, stroke = .5, alpha = .95) +
+  geom_point(size = 3, color = "white", fill = "red", shape = 21, stroke = .5, alpha = .95) +
   labs(x = "Data", 
        y = "Número de novos casos confirmados") +
-  scale_x_date(date_breaks = "1 day", date_labels = "%d/%m") +
+  scale_x_date(date_breaks = "2 day", date_labels = "%d/%m") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90), 
         legend.position = "none")
@@ -56,10 +55,10 @@ fig_new_cases_rc <- ggplot(data = rc_cases_time) +
 fig_deaths_rc <-  ggplot(data = rc_cases_time) +
   aes(x = date, y = mortes) +
   geom_line(size = 1, color = "gray30") +
-  geom_point(size = 4, color = "white", fill = "gray30", shape = 21, stroke = .5, alpha = .95) +
+  geom_point(size = 3, color = "white", fill = "gray30", shape = 21, stroke = .5, alpha = .95) +
   labs(x = "Data", 
        y = "Número de mortes") +
-  scale_x_date(date_breaks = "1 day", 
+  scale_x_date(date_breaks = "2 day", 
                date_labels = "%d/%m") +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90), 
@@ -83,65 +82,51 @@ fig_sus_rc <- rc_sus %>%
 
 
 # entorno -----------------------------------------------------------------
-# import data -------------------------------------------------------------
 # munipality geodata
 mun_geo <- geobr::read_municipality(code_muni = "all", year = 2018) %>% 
   dplyr::filter(abbrev_state == "SP")
-mun_geo
 
 # cases
 mun_cases_time <- readr::read_csv("https://raw.githubusercontent.com/wcota/covid19br/master/cases-brazil-cities-time.csv") %>% 
   tidyr::separate(city, c("name_muni", "abbrev_state"), sep = "/") %>%
   dplyr::mutate(name_muni = stringr::str_to_title(name_muni))
-tibble::glimpse(mun_cases_time)
 
 # join
 mun_geo_join <- mun_geo %>%
   dplyr::mutate(name_muni = stringr::str_to_title(name_muni),
                 abbrev_state = as.character(abbrev_state)) %>%
   dplyr::left_join(mun_cases_time, by = c("abbrev_state", "name_muni"))
-tibble::glimpse(mun_geo_join)
 
 # rio claro
 rc <- mun_geo %>% 
   dplyr::filter(name_muni == "Rio Claro", abbrev_state == "SP")
-rc
-plot(rc$geom)
 
 # buffer
 bu <- rc %>% 
   sf::st_buffer(.4)
-bu
-plot(bu$geom)
 
 # entorno
 en <- mun_geo_join %>% 
   dplyr::mutate(en = sf::st_intersects(., bu, sparse = FALSE)) %>% 
   dplyr::filter(en == TRUE)
-en
-plot(en$geom)
 
 # data entorno
 mun_cases_time_en <- mun_cases_time %>% 
   dplyr::filter(name_muni %in% en$name_muni, abbrev_state == "SP")
-mun_cases_time_en
 
 # graphics ----------------------------------------------------------------
 # graphs
 mun_cases_min <- mun_cases_time_en %>%
   dplyr::filter(date == max(date), totalCases > 18, abbrev_state != "TOTAL", name_muni != "Caso Sem Localização Definida") %>%
   dplyr::select(name_muni)
-mun_cases_min
 
 mun_cases_time_en_rc <- mun_cases_time_en %>%
   dplyr::filter(name_muni %in% mun_cases_min$name_muni) %>% 
   dplyr::filter(name_muni == "Rio Claro")
-mun_cases_time_en_rc
 
 mun_cases_time_en_sem_rc <- mun_cases_time_en %>%
   dplyr::filter(name_muni %in% mun_cases_min$name_muni) %>% 
   dplyr::filter(name_muni != "Rio Claro")
-mun_cases_time_en_sem_rc
 
 fig_cases_mun_ani <- ggplot() +
   geom_line(data = mun_cases_time_en_sem_rc, aes(x = date, y = totalCases, col = name_muni), size = 1.2) +
@@ -156,7 +141,7 @@ fig_cases_mun_ani <- ggplot() +
   guides(color = guide_legend("name_muni")) +
   scale_colour_grey(start = .75, end = .75) +
   scale_fill_grey(start = .75, end = .75) +
-  scale_x_date(date_breaks = "10 day", date_labels = "%d/%m") +
+  scale_x_date(date_breaks = "2 day", date_labels = "%d/%m") +
   coord_cartesian(clip = 'off') +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 90),
@@ -178,7 +163,7 @@ fig_mortes_mun_ani <- ggplot() +
   guides(color = guide_legend("name_muni")) +
   scale_colour_grey(start = .75, end = .75) +
   scale_fill_grey(start = .75, end = .75) +
-  scale_x_date(date_breaks = "10 day", date_labels = "%d/%m") +
+  scale_x_date(date_breaks = "2 day", date_labels = "%d/%m") +
   coord_cartesian(clip = 'off') +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 90),
