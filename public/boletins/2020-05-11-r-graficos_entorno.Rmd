@@ -37,28 +37,24 @@ Esse relatório foi inspirado na postagem [Relatório dinâmico com Rmarkdown: C
 gganimate::animate(fig_cases_mun_ani)
 ```
 
-### Evolução diária do número de mortes confirmadas
-```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
-gganimate::animate(fig_mortes_mun_ani)
-```
-
-### Evolução diária de novos casos confirmadas
 ```{r echo=FALSE, message=FALSE, fig.align='center'}
 plotly::ggplotly(fig_cases_mun_rc)
 ```
 
-### Evolução diária do número de mortes confirmadas
-```{r echo=FALSE, message=FALSE}
-plotly::ggplotly(fig_mortes_mun_rc)
-```
-
-### Distribuição do número de casos confirmados
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 tmap_mode("view")
 map_casos
 ```
 
-### Distribuição do número de mortes confirmadas
+### Evolução diária do número de mortes confirmadas
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center'}
+gganimate::animate(fig_mortes_mun_ani)
+```
+
+```{r echo=FALSE, message=FALSE}
+plotly::ggplotly(fig_mortes_mun_rc)
+```
+
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 tmap_mode("view")
 map_mortes
