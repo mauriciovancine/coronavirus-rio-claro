@@ -51,7 +51,7 @@ map_casos
 gganimate::animate(fig_mortes_mun_ani)
 ```
 
-```{r echo=FALSE, message=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE,}
 plotly::ggplotly(fig_mortes_mun_rc)
 ```
 

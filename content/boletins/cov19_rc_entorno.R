@@ -148,7 +148,9 @@ fig_mortes_mun_rc
 
 # map ---------------------------------------------------------------------
 # map cases
-map_casos <- tm_shape(en) +
+map_casos <- en %>% 
+  dplyr::select(totalCases, name_muni) %>% 
+  tm_shape() +
   tm_polygons("totalCases", palette = "Reds", title = "Total de casos", textNA = "Sem casos",
               breaks = c(1, 20, 40, 60, 80, 100, 120, 140, max(en$totalCases, na.rm = TRUE))) +
   tm_text("name_muni", size = .8) +
@@ -163,6 +165,7 @@ map_casos
 
 # maps deaths
 map_mortes <- en %>%
+  dplyr::select(deaths, name_muni) %>% 
   tm_shape() +
   tm_polygons(col = "deaths", palette = "Blues", title = "Total de mortos", 
               textNA = "Sem mortos", breaks = c(1, 3, 5, 7, 9, 11, max(en$deaths, na.rm = TRUE))) +
