@@ -6,7 +6,7 @@
     <description>Recent content on COVID-19 Rio Claro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Sat, 16 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://coronavirusrioclaro.netlify.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Casos de COVID-19 em Rio Claro/SP</title>
       <link>https://coronavirusrioclaro.netlify.com/boletins/2020-05-14-r-graficos_rio_claro/</link>
-      <pubDate>Sat, 16 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://coronavirusrioclaro.netlify.com/boletins/2020-05-14-r-graficos_rio_claro/</guid>
       <description>Número de casos de COVID-19 Esse relatório dinâmico mostra o número de casos e mortes de COVID-19 em Rio Claro/SP
@@ -25,7 +25,7 @@ Esse relatório foi inspirado na postagem Relatório dinâmico com Rmarkdown: CO
     <item>
       <title>Casos de COVID-19 nos municípios do entorno de Rio Claro/SP</title>
       <link>https://coronavirusrioclaro.netlify.com/boletins/2020-05-14-r-graficos_entorno/</link>
-      <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 17 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://coronavirusrioclaro.netlify.com/boletins/2020-05-14-r-graficos_entorno/</guid>
       <description>Número de casos de COVID-19 Esse relatório dinâmico mostra o número de casos e mortes de COVID-19 nos municípios do entorno de Rio Claro/SP

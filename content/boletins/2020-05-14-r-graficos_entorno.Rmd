@@ -1,7 +1,7 @@
 ---
 title: "Casos de COVID-19 nos municípios do entorno de Rio Claro/SP"
 author: "Maurício Vancine"
-date: 2020-05-11
+date: 2020-05-17
 categories: []
 tags: []
 fig_crop: no
