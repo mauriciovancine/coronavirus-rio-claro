@@ -1,0 +1,29 @@
+---
+title: "Modelagem e simulação (SIR) da infecção por COVID 19 na cidade de Rio Claro"
+author: "Prof. Dr. Rodrigo Moruzzi"
+date: 2020-04-04
+categories: []
+tags: []
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+library(lubridate)
+library(tidyverse)
+```
+
+## Conteúdo
+As informações constantes nesse documento foram elaboradas visando auxiliar as ações do poder público local no combate ao espalhamento doença infecciosa causada pela síndrome respiratória aguda grave 2 (SARS-CoV-2), COVID 19
+
+## Apresentação
+Dada a presente situação de emergência que aflige o planeta em decorrência do rápido espalhamento da doença infecciosa causada pelo coronavírus da síndrome respiratória aguda grave 2 (SARS-CoV-2), COVID 19, apresentam-se nesse documento cenários de infecção para a cidade de Rio Claro. Entende-se que esse documento é uma contribuição da Universidade Pública, representada aqui pela UNESP, para as autoridades responsáveis pela saúde pública do município
+
+O modelo clássico SIR foi implementado em programa computacional usando dados disponíveis nos meios oficiais de comunicação sobre a doença. Assim, o objetivo desse documento é auxiliar no entendimento da dinâmica da doença e das medidas de proteção, permitindo avaliar seus efeitos na infecção por COVID 19 na cidade
+
+Os cenários simulados apresentados limitam-se as hipóteses lançadas na concepção da modelagem e as informações disponíveis na data das simulações. As maiores dificuldades estão em prever o início da infecção, o dia zero (t=0), e o número de infectados assintomáticos circulantes, devido principalmente a ausência de testes universais para a totalidade da população suscetível. Todavia, para além do caráter preditivo per si os resultados podem ser usados para avaliação do efeito das medidas protetivas
+
+Ainda, cada cenário não concretizado pelos fatos de um futuro próximo espelham as atitudes tomadas no presente
+
+## Documento
+O documento em sua íntegra pode ser acessado nesse [link](https://coronavirusrioclaro.netlify.app/pdf/Modelo SIR compartimentado Rio Claro_R Moruzzi-IGCE-UNESP.pdf)
+
