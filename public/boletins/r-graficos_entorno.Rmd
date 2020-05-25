@@ -1,7 +1,7 @@
 ---
 title: "Casos de COVID-19 nos municípios do entorno de Rio Claro/SP"
 author: "Maurício Vancine"
-date: 2020-05-22
+date: "`r Sys.Date()`"
 categories: []
 tags: []
 fig_crop: no
@@ -27,7 +27,7 @@ Os dados são obtidos de forma dinâmica do [site](https://labs.wesleycota.com/s
 
 Esse relatório foi inspirado na postagem [Relatório dinâmico com Rmarkdown: COVID-19 no Brasil](https://icaroagostino.github.io/post/rmd-cov19/) de [Ícaro Agostino ](https://icaroagostino.github.io/blog/).
 
-Última atualização: **`r lubridate::today() %>% format(format="%d/%m/%Y")`**.
+Última atualização: **`r Sys.Date()`**.
 
 ---
 
