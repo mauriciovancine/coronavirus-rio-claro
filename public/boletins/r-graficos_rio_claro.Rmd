@@ -20,7 +20,7 @@ source("cov19_rc.R")
 ## Número de casos de COVID-19
 Esse relatório dinâmico mostra o número de casos e mortes de **COVID-19 em Rio Claro/SP**
 
-Os dados são obtidos de forma dinâmica do [site](https://labs.wesleycota.com/sarscov2/br/) do pesquisador [Wesley Cota](https://wesleycota.com/), que inclui os dados confirmados pela plataforma oficial do Ministério da Saúde e demais noticiados pelas secretarias de saúde de cada estado.
+Os dados são obtidos de forma dinâmica do [site](https://www.seade.gov.br/coronavirus/) da Secretaria de Saúde do Estado de São Paulo.
 
 Esse relatório foi inspirado na postagem [Relatório dinâmico com Rmarkdown: COVID-19 no Brasil](https://icaroagostino.github.io/post/rmd-cov19/) de [Ícaro Agostino ](https://icaroagostino.github.io/blog/).
 
