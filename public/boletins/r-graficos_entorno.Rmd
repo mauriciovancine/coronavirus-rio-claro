@@ -19,7 +19,7 @@ library(gifski)
 ```{r include=FALSE}
 source("cov19_rc_entorno.R")
 ```
-
+  
 ## Número de casos de COVID-19
 Esse relatório dinâmico mostra o número de casos e mortes de **COVID-19 nos municípios do entorno de Rio Claro/SP**
 
