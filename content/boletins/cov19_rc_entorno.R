@@ -1,7 +1,7 @@
 #' ---
 #' title: covid19 rio claro
 #' author: mauricio vancine
-#' date: 2021-05-26
+#' date: 2021-06-01
 #' ---
 
 # packages
@@ -34,7 +34,9 @@ rc <- mun_geo %>%
 
 # buffer
 bu <- rc %>% 
-  sf::st_buffer(.4)
+  sf::as_Spatial() %>% 
+  raster::buffer(width = .4) %>% 
+  sf::st_as_sf()
 
 # entorno
 en <- mun_geo_join %>% 
@@ -44,7 +46,6 @@ en <- mun_geo_join %>%
 # data entorno
 mun_cases_time_en <- mun_cases_time %>% 
   dplyr::filter(nome_munic %in% en$nome_munic)
-mun_cases_time_en
 
 # verificar
 dplyr::glimpse(mun_cases_time_en)
@@ -147,7 +148,7 @@ map_casos <- en %>%
               textNA = "Sem mortos", style = "jenks") +
   tm_text("nome_munic", size = .8) +
   tm_shape(bu) +
-  tm_borders(col = "red", lwd = 4, lty = 2) +
+  tm_borders(col = "black", lwd = 4, lty = 2) +
   tm_shape(rc) +
   tm_borders(col = "red", lwd = 4) +
   tm_scale_bar(position = c(0, -.01), text.size = .6) +
@@ -163,7 +164,7 @@ map_mortes <- en %>%
               textNA = "Sem mortos", style = "jenks") +
   tm_text("nome_munic", size = .8) +
   tm_shape(bu) +
-  tm_borders(col = "red", lwd = 4, lty = 2) +
+  tm_borders(col = "black", lwd = 4, lty = 2) +
   tm_shape(rc) +
   tm_borders(col = "red", lwd = 4) +
   tm_compass(position = c("right", "top")) +
