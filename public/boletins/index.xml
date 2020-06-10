@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Boletins on COVID-19 Rio Claro</title>
-    <link>https://coronavirusrioclaro.netlify.com/boletins/</link>
+    <link>/boletins/</link>
     <description>Recent content in Boletins on COVID-19 Rio Claro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 09 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://coronavirusrioclaro.netlify.com/boletins/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/boletins/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Casos de COVID-19 em Rio Claro/SP</title>
-      <link>https://coronavirusrioclaro.netlify.com/boletins/r-graficos_rio_claro/</link>
-      <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
+      <link>/boletins/r-graficos_rio_claro/</link>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://coronavirusrioclaro.netlify.com/boletins/r-graficos_rio_claro/</guid>
+      <guid>/boletins/r-graficos_rio_claro/</guid>
       <description>Número de casos de COVID-19 Esse relatório dinâmico mostra o número de casos e mortes de COVID-19 em Rio Claro/SP
 Os dados são obtidos de forma dinâmica do site da Secretaria de Saúde do Estado de São Paulo.
 Esse relatório foi inspirado na postagem Relatório dinâmico com Rmarkdown: COVID-19 no Brasil de Ícaro Agostino.
-Última atualização: 09/06/2020.
+Última atualização: 10/06/2020.
  Análise do município de Rio Claro Total acumulado diário do número de casos confirmados em Rio Claro/SP  {&#34;</description>
     </item>
     
     <item>
       <title>Casos de COVID-19 nos municípios do entorno de Rio Claro/SP</title>
-      <link>https://coronavirusrioclaro.netlify.com/boletins/r-graficos_entorno/</link>
-      <pubDate>Tue, 09 Jun 2020 00:00:00 +0000</pubDate>
+      <link>/boletins/r-graficos_entorno/</link>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://coronavirusrioclaro.netlify.com/boletins/r-graficos_entorno/</guid>
+      <guid>/boletins/r-graficos_entorno/</guid>
       <description>Número de casos de COVID-19 Esse relatório dinâmico mostra o número de casos e mortes de COVID-19 nos municípios do entorno de Rio Claro/SP
 Os dados são obtidos de forma dinâmica do site da Secretaria de Saúde do Estado de São Paulo.
 Esse relatório foi inspirado na postagem Relatório dinâmico com Rmarkdown: COVID-19 no Brasil de Ícaro Agostino.</description>
@@ -37,10 +37,10 @@ Esse relatório foi inspirado na postagem Relatório dinâmico com Rmarkdown: CO
     
     <item>
       <title>Modelagem e simulação (SIR) da infecção por COVID 19 na cidade de Rio Claro</title>
-      <link>https://coronavirusrioclaro.netlify.com/boletins/sir_covid19_rc/</link>
+      <link>/boletins/sir_covid19_rc/</link>
       <pubDate>Sat, 04 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://coronavirusrioclaro.netlify.com/boletins/sir_covid19_rc/</guid>
+      <guid>/boletins/sir_covid19_rc/</guid>
       <description>Conteúdo As informações constantes nesse documento foram elaboradas visando auxiliar as ações do poder público local no combate ao espalhamento doença infecciosa causada pela síndrome respiratória aguda grave 2 (SARS-CoV-2), COVID 19
  Apresentação Dada a presente situação de emergência que aflige o planeta em decorrência do rápido espalhamento da doença infecciosa causada pelo coronavírus da síndrome respiratória aguda grave 2 (SARS-CoV-2), COVID 19, apresentam-se nesse documento cenários de infecção para a cidade de Rio Claro.</description>
     </item>

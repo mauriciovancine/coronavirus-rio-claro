@@ -24,21 +24,26 @@ theme = "minimal"
     url = "/boletins/"
     name = "Boletins"
     weight = 2
-    
+
+[[menu.main]]
+    url = "https://datastudio.google.com/embed/reporting/44b18def-5c65-4a1b-976b-2fcc55bfabe1/page/6FcRB"
+    name = "Relatório"
+    weight = 3
+
 [[menu.main]]
     url = "/infos/"
     name = "Informações"
-    weight = 3
+    weight = 4
 
 [[menu.main]]
     url = "/midia/"
     name = "Mídia"
-    weight = 4
+    weight = 5
     
 [[menu.main]]
     url = "/about/"
     name = "Sobre"
-    weight = 5
+    weight = 6
 
 # Social icons to be shown on the right-hand side of the navigation bar.
 # The "name" field should match the name of the icon in Font Awesome.
