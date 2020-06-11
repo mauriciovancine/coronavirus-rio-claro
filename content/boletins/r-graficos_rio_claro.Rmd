@@ -43,8 +43,3 @@ plotly::ggplotly(fig_new_cases_rc)
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 plotly::ggplotly(fig_deaths_rc)
 ```
-
-### Informações sobre equipamentos de saúde de Rio Claro/SP
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-plotly::ggplotly(fig_sus_rc)
-```
