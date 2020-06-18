@@ -1,7 +1,7 @@
 #' ---
 #' title: covid19 rio claro
 #' author: mauricio vancine
-#' date: 2021-06-01
+#' date: 2020-06-18
 #' ---
 
 # packages
@@ -15,7 +15,7 @@ library(tmap)
 library(tidyverse)
 
 # entorno -----------------------------------------------------------------
-# munipality geodata
+# municipality geodata
 mun_geo <- geobr::read_municipality(code_muni = "all", year = 2018) %>% 
   dplyr::filter(abbrev_state == "SP")
 
@@ -35,7 +35,7 @@ rc <- mun_geo %>%
 # buffer
 bu <- rc %>% 
   sf::as_Spatial() %>% 
-  raster::buffer(width = .4) %>% 
+  raster::buffer(width = .3) %>% 
   sf::st_as_sf()
 
 # entorno
@@ -53,10 +53,12 @@ dplyr::glimpse(mun_cases_time_en)
 # graphics ----------------------------------------------------------------
 # graphs
 mun_cases_time_en_rc <- mun_cases_time_en %>%
-  dplyr::filter(nome_munic == "Rio Claro")
+  dplyr::filter(nome_munic == "Rio Claro",
+                datahora >= "2020-04-01")
 
 mun_cases_time_en_sem_rc <- mun_cases_time_en %>%
-  dplyr::filter(nome_munic != "Rio Claro")
+  dplyr::filter(nome_munic != "Rio Claro",
+                datahora >= "2020-04-01")
 
 fig_cases_mun_ani <- ggplot() +
   geom_line(data = mun_cases_time_en_sem_rc, aes(x = datahora, y = casos, col = nome_munic), size = 1.2) +
@@ -71,7 +73,7 @@ fig_cases_mun_ani <- ggplot() +
   guides(color = guide_legend("nome_munic")) +
   scale_colour_grey(start = .75, end = .75) +
   scale_fill_grey(start = .75, end = .75) +
-  scale_x_date(date_breaks = "2 day", date_labels = "%d/%m") +
+  scale_x_date(date_breaks = "5 day", date_labels = "%d/%m") +
   coord_cartesian(clip = 'off') +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 90),
@@ -93,7 +95,7 @@ fig_mortes_mun_ani <- ggplot() +
   guides(color = guide_legend("nome_munic")) +
   scale_colour_grey(start = .75, end = .75) +
   scale_fill_grey(start = .75, end = .75) +
-  scale_x_date(date_breaks = "2 day", date_labels = "%d/%m") +
+  scale_x_date(date_breaks = "5 day", date_labels = "%d/%m") +
   coord_cartesian(clip = 'off') +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 90),
@@ -103,39 +105,37 @@ fig_mortes_mun_ani <- ggplot() +
 # anim_save("fig_mortes.gif", fig_mortes_mun_ani, fps = 20, duration = 15, start_pause = 10, end_pause = 60, wi = 25, he = 15, un = "cm", res = 100)
 
 # fixo
-fig_cases_mun_rc <- mun_cases_time_en %>%
-  ggplot() +
-  aes(x = datahora, y = casos, col = nome_munic, fill = nome_munic) +
-  geom_line() +
-  geom_point(size = 2) +
+fig_cases_mun_rc <- ggplot() +
+  geom_line(data = mun_cases_time_en_sem_rc, aes(x = datahora, y = casos, col = nome_munic), size = 1.2) +
+  geom_point(data = mun_cases_time_en_sem_rc, aes(x = datahora, y = casos, col = nome_munic), size = 2) +
+  geom_line(data = mun_cases_time_en_rc, aes(x = datahora, y = casos, col = nome_munic), size = 1.2, color = "red") +
+  geom_point(data = mun_cases_time_en_rc, aes(x = datahora, y = casos, col = nome_munic), size = 2, color = "red") +
   labs(x = "Data", y = "Número de casos") +
-  scale_colour_viridis_d(name = "Municípios") +
-  scale_fill_viridis_d(name = "Municípios") +
-  scale_x_date(date_breaks = "10 day", date_labels = "%d/%m") +
-  coord_cartesian(clip = "off") + 
-  theme_bw() + 
+  guides(color = guide_legend("nome_munic")) +
+  scale_colour_grey(start = .75, end = .75) +
+  scale_fill_grey(start = .75, end = .75) +
+  scale_x_date(date_breaks = "5 day", date_labels = "%d/%m") +
+  coord_cartesian(clip = 'off') +
+  theme_minimal() +
   theme(axis.text.x = element_text(angle = 90),
-        legend.position = c(.15, .65))
+        legend.position = "none")
 fig_cases_mun_rc
 # ggsave("fig_cases.png", fig_cases_mun_rc, wi = 25, he = 15, un = "cm", dpi = 300)
 
-fig_mortes_mun_rc <- mun_cases_time_en %>%
-  ggplot() +
-  aes(x = datahora, y = obitos, col = nome_munic, fill = nome_munic) +
-  geom_line() +
-  geom_point(size = 2) +
-  # geom_text(data = mun_cases_time_en_sem_rc %>% dplyr::filter(date == max(date), nome_munic %in% mun_cases_min$nome_munic), 
-  #           aes(x = date, label = nome_munic)) + 
-  # geom_text(data = mun_cases_time_en_rc %>% dplyr::filter(nome_munic == "Rio Claro", date == max(date)), 
-  #           aes(x = date, label = nome_munic), color = "blue") + 
+fig_mortes_mun_rc <- ggplot() +
+  geom_line(data = mun_cases_time_en_sem_rc, aes(x = datahora, y = obitos, col = nome_munic), size = 1.2) +
+  geom_point(data = mun_cases_time_en_sem_rc, aes(x = datahora, y = obitos, col = nome_munic), size = 2) +
+  geom_line(data = mun_cases_time_en_rc, aes(x = datahora, y = obitos, col = nome_munic), size = 1.2, color = "blue") +
+  geom_point(data = mun_cases_time_en_rc, aes(x = datahora, y = obitos, col = nome_munic), size = 2, color = "blue") +
   labs(x = "Data", y = "Número de mortes") +
-  scale_colour_viridis_d(name = "Municípios") +
-  scale_fill_viridis_d(name = "Municípios") +
-  scale_x_date(date_breaks = "10 day", date_labels = "%d/%m") +
-  coord_cartesian(clip = "off") + 
-  theme_bw() + 
+  guides(color = guide_legend("nome_munic")) +
+  scale_colour_grey(start = .75, end = .75) +
+  scale_fill_grey(start = .75, end = .75) +
+  scale_x_date(date_breaks = "5 day", date_labels = "%d/%m") +
+  coord_cartesian(clip = 'off') +
+  theme_minimal() +
   theme(axis.text.x = element_text(angle = 90),
-        legend.position = c(.15, .65))
+        legend.position = "none")
 fig_mortes_mun_rc
 # ggsave("fig_mortos.png", fig_mortes_mun_rc, wi = 25, he = 15, un = "cm", dpi = 300)
 
@@ -145,12 +145,12 @@ map_casos <- en %>%
   dplyr::select(casos, nome_munic) %>% 
   tm_shape() +
   tm_polygons("casos", palette = "Reds", title = "Total de casos", 
-              textNA = "Sem mortos", style = "jenks") +
+              textNA = "Sem casos", style = "jenks") +
   tm_text("nome_munic", size = .8) +
   tm_shape(bu) +
   tm_borders(col = "black", lwd = 4, lty = 2) +
   tm_shape(rc) +
-  tm_borders(col = "red", lwd = 4) +
+  tm_borders(col = "black", lwd = 4) +
   tm_scale_bar(position = c(0, -.01), text.size = .6) +
   tm_layout(legend.position = c(.78, .03))
 map_casos
@@ -166,8 +166,7 @@ map_mortes <- en %>%
   tm_shape(bu) +
   tm_borders(col = "black", lwd = 4, lty = 2) +
   tm_shape(rc) +
-  tm_borders(col = "red", lwd = 4) +
-  tm_compass(position = c("right", "top")) +
+  tm_borders(col = "black", lwd = 4) +
   tm_scale_bar(position = c(0, -.01), text.size = .6) +
   tm_layout(legend.position = c(.78, .03))
 map_mortes
