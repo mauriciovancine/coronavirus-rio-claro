@@ -11,9 +11,9 @@ library(tidyverse)
 # import data -------------------------------------------------------------
 # sus - https://www.seade.gov.br/coronavirus/
 leitos_internacoes <- readr::read_csv2("https://raw.githubusercontent.com/seade-R/dados-covid-sp/master/data/plano_sp_leitos_internacoes.csv") %>% 
-  dplyr::filter(nome_drs == "DRS 10 - Piracicaba") %>% 
+  dplyr::filter(nome_drs == "DRS 10 Piracicaba") %>% 
   dplyr::select(datahora:internacoes_7v7) %>% 
-  dplyr::mutate(datahora = lubridate::dmy(datahora))
+  dplyr::mutate(datahora = lubridate::ymd(datahora))
 leitos_internacoes
 
 # municipality time - https://covid19br.wcota.me/
@@ -56,6 +56,7 @@ fig_cases_rc <- ggplot(data = rc_cases_time) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = .5), 
         legend.position = "none")
+fig_cases_rc
 
 # total cases and isolation
 # scale_factor <- max(rc_cases_time_iso$casos) / max(rc_cases_time_iso$isolamento)
@@ -91,6 +92,7 @@ fig_new_cases_rc <- ggplot(data = rc_cases_time) +
   theme_bw() +
   theme(axis.text.x = element_text(angle = 90, vjust = .5), 
         legend.position = "none")
+fig_new_cases_rc
 
 # new cases and isolation
 # scale_factor <- max(rc_cases_time_iso$casos_novos) / max(rc_cases_time_iso$isolamento)
@@ -131,14 +133,15 @@ fig_deaths_rc <-  ggplot(data = rc_cases_time) +
 fig_deaths_rc
 
 # internacoes e leitos
-# fig_int_lei <-  ggplot(data = leitos_internacoes) +
-#   geom_bar(aes(x = datahora, y = internacoes_7d), stat = "identity", size = 2, fill = "blue") +
-#   geom_bar(aes(x = datahora, y = total_covid_uti), stat = "identity", size = 2, fill = "steelblue") +
-#   labs(x = "Data", y = "Número totais") +
-#   scale_x_date(date_breaks = "2 day", 
-#                date_labels = "%d/%m") +
-#   theme_bw() +
-#   theme(axis.text.x = element_text(angle = 90, vjust = .5))
-# fig_int_lei
+fig_int_lei <-  ggplot(data = leitos_internacoes) +
+  geom_bar(aes(x = datahora, y = internacoes_7d), stat = "identity", size = 2, fill = "blue") +
+  # geom_bar(aes(x = datahora, y = total_covid_uti_mm7d), stat = "identity", size = 2, fill = "steelblue") +
+  # geom_bar(aes(x = datahora, y = leitos_pc), stat = "identity", size = 2, fill = "blue") +
+  labs(x = "Data", y = "Número totais") +
+  scale_x_date(date_breaks = "2 day",
+               date_labels = "%d/%m") +
+  theme_bw() +
+  theme(axis.text.x = element_text(angle = 90, vjust = .5))
+fig_int_lei
 
 # end ---------------------------------------------------------------------

@@ -35,7 +35,7 @@ rc <- mun_geo %>%
 # buffer
 bu <- rc %>% 
   sf::as_Spatial() %>% 
-  raster::buffer(width = .3) %>% 
+  raster::buffer(width = .4) %>% 
   sf::st_as_sf()
 
 # entorno
@@ -146,7 +146,7 @@ map_casos <- en %>%
   tm_shape() +
   tm_polygons("casos", palette = "Reds", title = "Total de casos", 
               textNA = "Sem casos", style = "jenks") +
-  tm_text("nome_munic", size = .8) +
+  tm_text("nome_munic", size = .6) +
   tm_shape(bu) +
   tm_borders(col = "black", lwd = 4, lty = 2) +
   tm_shape(rc) +
@@ -162,7 +162,7 @@ map_mortes <- en %>%
   tm_shape() +
   tm_polygons(col = "obitos", palette = "Blues", title = "Total de mortos", 
               textNA = "Sem mortos", style = "jenks") +
-  tm_text("nome_munic", size = .8) +
+  tm_text("nome_munic", size = .6) +
   tm_shape(bu) +
   tm_borders(col = "black", lwd = 4, lty = 2) +
   tm_shape(rc) +

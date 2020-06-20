@@ -41,8 +41,7 @@ gganimate::animate(fig_cases_mun_ani)
 plotly::ggplotly(fig_cases_mun_rc)
 ```
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=8}
-tmap_mode("view")
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.width=8}
 map_casos
 ```
 
@@ -51,11 +50,10 @@ map_casos
 gganimate::animate(fig_mortes_mun_ani)
 ```
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=8}
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.width=8}
 plotly::ggplotly(fig_mortes_mun_rc)
 ```
 
-```{r echo=FALSE, message=FALSE, warning=FALSE, fig.width=8}
-# tmap_mode("view")
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.align='center', fig.width=8}
 map_mortes
 ```
