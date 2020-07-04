@@ -6,7 +6,7 @@
     <description>Recent content in Boletins on COVID-19 Rio Claro</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Fri, 03 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://coronavirusrioclaro.netlify.com/boletins/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,26 +14,26 @@
     <item>
       <title>Casos de COVID-19 em Rio Claro/SP</title>
       <link>https://coronavirusrioclaro.netlify.com/boletins/r-graficos_rio_claro/</link>
-      <pubDate>Fri, 03 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://coronavirusrioclaro.netlify.com/boletins/r-graficos_rio_claro/</guid>
       <description>Número de casos de COVID-19 Esse relatório dinâmico mostra o número de casos e mortes de COVID-19 em Rio Claro/SP
 Os dados são obtidos de forma dinâmica do site da Secretaria de Saúde do Estado de São Paulo.
 Esse relatório foi inspirado na postagem Relatório dinâmico com Rmarkdown: COVID-19 no Brasil de Ícaro Agostino.
-Última atualização: 03/07/2020.
+Última atualização: 04/07/2020.
  Análise do município de Rio Claro Total acumulado diário do número de casos confirmados em Rio Claro/SP  {&#34;</description>
     </item>
     
     <item>
       <title>Casos de COVID-19 nos municípios do entorno de Rio Claro/SP</title>
       <link>https://coronavirusrioclaro.netlify.com/boletins/r-graficos_entorno/</link>
-      <pubDate>Fri, 03 Jul 2020 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 04 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://coronavirusrioclaro.netlify.com/boletins/r-graficos_entorno/</guid>
       <description>Número de casos de COVID-19 Esse relatório dinâmico mostra o número de casos e mortes de COVID-19 nos municípios do entorno de Rio Claro/SP
 Os dados são obtidos de forma dinâmica do site da Secretaria de Saúde do Estado de São Paulo.
 Esse relatório foi inspirado na postagem Relatório dinâmico com Rmarkdown: COVID-19 no Brasil de Ícaro Agostino.
-Última atualização: 2020-07-03.
+Última atualização: 2020-07-04.
  Análise dos municípios do entorno de Rio Claro/SP Evolução diária de novos casos confirmadas  {&#34;</description>
     </item>
     
