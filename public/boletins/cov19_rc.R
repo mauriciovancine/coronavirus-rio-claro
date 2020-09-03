@@ -1,7 +1,7 @@
 #' ---
 #' title: covid19 rio claro
 #' author: mauricio vancine
-#' date: 2020-05-26
+#' date: 2020-09-01
 #' ---
 
 # packages
@@ -23,7 +23,7 @@ download.file(url = paste0("https://www.saopaulo.sp.gov.br/wp-content/uploads/",
                            lubridate::today() %>% lubridate::month() %>% ifelse(. < 10, paste0("0", .), .), "/",
                            paste0(lubridate::today() %>% lubridate::year(),
                                   lubridate::today() %>% lubridate::month() %>% ifelse(. < 10, paste0("0", .), .),
-                                  lubridate::today() %>% lubridate::day()),
+                                  lubridate::today() %>% lubridate::day() %>% ifelse(. < 10, paste0("0", .), .)),
                            "_isolamento.csv"),
               destfile = "isolamento.txt")
 
