@@ -55,29 +55,3 @@ plotly::ggplotly(fig_new_deaths_rc)
 ```
 
 ---
-
-## Casos e isolamento
-### Total acumulado diário do número de casos confirmados e isolamento em Rio Claro/SP
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-fig_cases_isolation_rc
-```
-
-### Evolução diária de novos casos confirmadas e isolamento em Rio Claro/SP
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-fig_new_cases_isolation_rc
-```
-
----
-
-## Óbitos e isolamento
-### Evolução diária do número de óbitos confirmadas e isolamento em Rio Claro/SP
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-fig_deaths_isolation_rc
-```
-
-### Evolução diária de novos óbitos confirmadas e isolamento em Rio Claro/SP
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-fig_new_deaths_isolation_rc
-```
-
----
